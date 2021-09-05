@@ -18,8 +18,12 @@ command is going to build and spin up the application container in detached
 mode. It will manage all application dependencies.
 
 If everything went well you will have the application running and listening for
-new connections on `http://localhost:8000`. You can verify this with the command
-`docker-compose ps`.
+new connections on `http://localhost:8000/api/v1/`. You can verify this with the
+command `docker-compose ps`.
+
+### Applying migrations
+After starting the application run the next command so migrations are applyed
+`docker-compose exec web python manage.py migrate`.
 
 ## Running tests
 
